@@ -25,12 +25,12 @@ function useVest(armourValue, bproof_1, bproof_2, itemName)
         TriggerEvent('skinchanger:change', 'bproof_1', bproof_1, 'bproof_2', bproof_2)
 
         if currentArmour >= Config.RemoveItemThreshold then
-            TriggerServerEvent('ec_pdproof:removeVest', itemName)
+            TriggerServerEvent('armor:removeVest', itemName)
         end
     end)
 end
 
-RegisterNetEvent('ec_pdproof:useVest')
-AddEventHandler('ec_pdproof:useVest', function(armourValue, bproof_1, bproof_2, itemName)
+RegisterNetEvent('armor:useVest')
+AddEventHandler('armor:useVest', function(armourValue, bproof_1, bproof_2, itemName)
     useVest(armourValue, bproof_1, bproof_2, itemName)
 end)
